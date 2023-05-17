@@ -1,0 +1,63 @@
+# Unity generates
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+/*.sln
+/*.csproj
+!Crow.Gvg.Server.csproj
+/*.unityproj
+/*.booproj
+
+# Visual Studio / MonoDevelop generates
+*.userprefs
+
+# Default build target
+/Build/webgl
+/Build/xcode
+/Build/build.apk
+/Build/build.app
+/Build/build.exe
+
+# Others
+CriAtom/gateway_Cache/
+CriAtom/gateway_Backup/
+.vs/
+socialpost.png
+gateway-client.v12.suo
+UpgradeLog.htm
+otmn-client.v12.suo
+Thumbs.db
+Thumbs.db.meta
+gvglogs
+.vsconfig
+
+#codeandweb.com/
+
+/Assets/AdventureEditing/
+/Assets/AdventureEditing.meta
+
+*.suo
+changelist.txt
+S3/
+build/ReferenceViewer/
+
+# assetbundle graph tool
+/Assets/TemporalSettingFiles
+/Assets/TemporalSettingFiles.meta
+/Manifest
+/AssetBundle
+/Upload
+assetslist.json
+skillstate.json
+
+# personal
+personal-setting.json.local
+personal-setting.json.local.meta
+
+# Excluded directories
+/Assets/_*
