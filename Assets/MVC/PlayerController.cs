@@ -3,7 +3,7 @@ using UnityEngine.Assertions;
 
 namespace Assets.MVC
 {
-    public class PlayerController
+    public class PlayerController : IController
     {
         private Vector3 move = Vector3.zero;
         private PlayerView _view;

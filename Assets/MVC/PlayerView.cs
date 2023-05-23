@@ -6,7 +6,6 @@ namespace Assets.MVC
 {
     public class PlayerView : MonoBehaviour
     {
-        private PlayerController _controller;
         private void Awake()
         {
             //_controller = new PlayerController();
