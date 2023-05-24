@@ -23,16 +23,17 @@ namespace Assets
             _eventDictionary[typeof(T)] = message;
         }
 
-        public void Subscribe<T>(T message)
+        public void Invoke<T>(T tested) 
+            where T : Message
         {
-            _eventDictionary[typeof(T)].Invoke();
+            _eventDictionary[typeof(T)].Invoke()
         }
 
-        public void Invoke<T>(T tested) where T : Message
+        public void Subscribe<T>(T message, Func<T> subscribed)
         {
-            var test = tested as MessagePlayerMove;
-            _eventDictionary[(uint)message.Identifier]
+            _eventDictionary[typeof(T)].Subscribe(subscribed);
         }
+
     }
 
     public abstract class Message
@@ -66,20 +67,9 @@ namespace Assets
         {
             OnMessageReceived.Invoke(args);
         }
-
-        public override void Invoke<Vector2>(Vector2 args)
-        {
-            OnMessageReceived.Invoke(args);
-        }
-
         public override void Subscribe(UnityAction<Vector2> args)
         {
             OnMessageReceived += args;
-        }
-
-        public override void Subscribe<T>(UnityAction<T> args)
-        {
-            throw new NotImplementedException();
         }
     }
 
