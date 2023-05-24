@@ -13,7 +13,9 @@ namespace Assets
         }
         private Vector2 Movement(Vector2 moveV2)
         {
-            return inputAction.P1_Action.Move.ReadValue<Vector2>();
+
+            var move = inputAction.P1_Action.Move.ReadValue<Vector2>();
+            MessageManager.Instance.
         }
     }
 }
